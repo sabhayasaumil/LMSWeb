@@ -62,8 +62,10 @@
 		if(currentPage > 3)
 		{
 			startPage = currentPage-2;
+			
+			
 		}
-		if(currentPage+3 > totalPage)
+		if(startPage+5 > totalPage)
 		{
 			endPage = totalPage;
 		}
@@ -108,13 +110,22 @@
     %>
     
 		<% 
-			for(i = startPage; i<=endPage; i++)
+			for(i = startPage; i<currentPage; i++)
 		{ 
 		%>
     		<li><a href="<%=link+i%>"><%=i%></a></li>
     	<%
 		}
     	%>
+    		<li><a><%=currentPage%></a></li>
+    	<% 
+			for(i = currentPage+1; i<=endPage; i++)
+		{ 
+		%>
+    		<li><a href="<%=link+i%>"><%=i%></a></li>
+    	<%
+		}
+    	%>	
     
     <% 
  		if(currentPage <totalPage)

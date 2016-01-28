@@ -45,7 +45,6 @@ public class AuthorDAO extends AbstractDAO {
 		if(PageNo == 0)
 			PageNo++;
 		Integer PageOffset = (PageNo - 1) * PageSize;
-		System.out.println("PageNo" + PageNo);
 		return (List<Author>) read("select * from tbl_author LIMIT ? OFFSET ?", new Object[]{PageSize, PageOffset});
 	}
 	public int readAllCount() throws SQLException {
