@@ -132,7 +132,7 @@
  		{
  	%>
     <li>
-      <a href="<%=link+i%>" aria-label="Next">
+      <a href="<%=link+(currentPage+1)%>" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
